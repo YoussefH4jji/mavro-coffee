@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+:root{
+  --bgColor: #f4eddd;
+  --txtColor: #65451F;
+  --second-bg-color:#BBAB8C;
+  --thrd-bg-color:#BFB8A7 ;
+  --hover-color:#977032;
+  --footer-bg-color:#D1C9B7;
+}
+body{
+  margin: 0;
+  background-color: var(--bgColor);
+  max-width: 100vw;
+}
+button, .navbar-toggler{
+  border: none;
+}
+.navbar-logo{
+  width: 10rem;
+  margin-left: 2rem;
+}
+#checkbox {
+  display: none;
+}
+header{
+  position: fixed;
+  background-color: var(--bgColor);
+  z-index: 1;
+  width: 100vw;
+}
+.toggle {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: var(--txtColor);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1 {
+  width: 50%;
+}
+
+#bar2 {
+  width: 75%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .1s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+.header-link{
+  color: var(--txtColor);
+  font-size: 1.3rem;
+}
+a:hover,.header-link:hover{
+  color: var(--hover-color);
+  font-weight: 500;
+  text-decoration: underline;
+}
+.hero-section{
+  position: relative;
+  background-image: url("../images/hero bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+}
+.hero-section::before{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--txtColor);
+  position: absolute;
+  opacity: .4;
+}
+.infos-container{
+  position: relative;
+  color: var(--bgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15rem;
+}
+.hero-text-container{
+  margin-left: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 50rem;
+}
+.hero-title{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 5rem;
+}
+.hero-divider{
+  display: flex;
+  align-items: center;
+  
+}
+.hero-icon{
+  /* position: relative; */
+  font-size: 1.3rem;
+  color: var(--bgColor);
+}
+.hero-line{
+  border: 2px solid var(--bgColor);
+  border-radius: 1rem;
+  width: 35rem;
+
+}
+.hero-p{
+  font-family: 'Lobster Two', sans-serif;
+  font-size: 1.5rem;
+}
+.hero-btn{
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn{
+  background-color: var(--txtColor);
+  color: var(--bgColor);
+  font-weight: bold;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5em;
+  padding: 0.5rem 2rem;
+  transition: .5s;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: .1rem;
+  width: auto;
+  height: auto;
+}
+.btn:hover{
+  color: var(--txtColor);
+  background: var(--bgColor);
+}
+.hero-img{
+  position: relative;
+  width: 30rem;
+  max-width: 100vw;
+}
+.hero-our-infos{
+  position: relative;
+  color: var(--bgColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info-numbers{
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Lobster Two', sans-serif;
+}
+.info-p{
+  font-size: 2rem;
+  font-family: 'Lobster', sans-serif;
+}
+.about-section{
+  margin-top: 2rem;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--txtColor);
+  font-family: 'Lobster', sans-serif;
+
+}
+.divider{
+  display: flex;
+  align-items: center;
+}
+.line{
+  border-bottom: 4px solid var(--txtColor);
+  width: 6rem;
+}
+.about-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 50rem; */
+}
+.about-img{
+  width: 20rem;
+  transform: scaleX(-1);
+}
+.about-container p{
+  font-size: 1.5rem;
+  color: var(--txtColor);
+  width: auto;
+  max-width: 100vw;
+  margin-right: 15rem;
+  font-family: 'Lobster', sans-serif;
+
+}
+.services-container{
+  display: flex;  
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  max-width: 100vw;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #BBAB8C, #977032);
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #65451F;
+  inset: 5px;
+  border-radius: 15px;
+}  
+
+.services-info{
+  color: var(--bgColor);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.services-icon{
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right:auto ;
+
+}
+.service{
+  font-family: 'Lobster Two', sans-serif;
+  font-size: 2rem;
+}
+.reviews-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.comment-section{
+  display: flex;
+  align-items: center;
+}
+.comment-section p{
+  font-size: 1.2rem;
+  font-family: 'Lobster Two', sans-serif;
+  letter-spacing: .2rem;
+}
+.cup-img{
+  width: 10rem;
+  transform: rotate(-30deg);
+}
+.reviews-section{
+  background-color: var(--txtColor);
+  color: var(--bgColor);
+}
+.reviews-section h1{
+  text-align: center;
+  font-family: 'Lobster', sans-serif;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+}
+.review{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+
+  width: 50%;
+}
+.review-arrow{
+  font-size: 8rem;
+}
+.prodcuts-container{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.customer-img{
+  border-radius: 50%;
+}
+.product-img{
+  width: 15rem;
+  height: inherit;
+  border-radius: 1rem;
+}
+.booking-section{
+  background-color: var(--second-bg-color);
+  color: var(--bgColor);
+  margin-top: 2rem;
+
+}
+.booking-section h1{
+  text-align: center;
+  font-family: 'Lobster', sans-serif;
+
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.booking-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.splashed-coffee{
+  width: 25rem;
+  transform: rotate(45deg);
+}
+.input-container{
+  position: relative;
+}
+
+.icon{
+  position: absolute;
+  left: .2rem;
+  top: 15%;
+  font-size: 1.2rem;
+  color: var(--txtColor);
+}
+input{
+  padding-left: 1.2rem;
+  border: none;
+  background-color: var(--bgColor);
+  color: var(--txtColor);
+  width: 100%;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  margin-bottom: .5rem;
+  font-family: 'Lobster Two', sans-serif;
+
+
+}
+.input-container{
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.guests{
+  width: 50%;
+  margin-left: auto;
+}
+.guest-icon{
+  left: 8.5rem;
+}
+.reserve-btn{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-section{
+  display: flex;
+  align-items: center;
+  background-color: var(--footer-bg-color);
+  color: var(--txtColor);
+  justify-content: space-around;
+}
+.footer-img{
+  width: 25rem;
+}
+.footer-links-container{
+  display: flex;
+  flex-direction: column;
+}
+.footer-links-container a{
+  color: var(--txtColor);
+  font-size: 1.3rem;
+}
+.contact-links{
+  display: flex;
+  flex-direction: row;
+}
+.contact-icon{
+  font-size: 1.3rem;
+  padding: 0;
+  margin-top: .4rem;
+}
+.contact-links p{
+  font-size: 1.2rem;
+}
+.location-container{
+  display: flex;
+  font-size: 1.3rem;
+}
+footer{
+  background-color: var(--third-bg-color);
+  color: var(--txtColor);
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Lobster Two', sans-serif;
+  letter-spacing: .2rem;
+}
+@media (max-width :1260px) {
+  
+  html{
+    font-size: 80%;
+  }
+}
+@media (max-width :850px){
+  .hero-img{
+    width: 20rem;
+  }
+}
+@media (max-width :780px) {
+
+  html{
+    font-size: 55%;
+  }
+
+}
+@media (max-width :535px) {
+ 
+  html{
+    font-size: 45%;
+  }
+
+  
+}
+@media (max-width :440px) {
+  html{
+    font-size: 35%;
+  }
+.hero-img{
+  width: 20rem;
+}
+
+}
+@media (max-width :343px) {
+ 
+  html{
+    font-size: 30%;
+  }
+}
+@media (max-width :300px) {
+
+  html{
+    font-size: 29%;
+  }
+
+}
+@media (max-width :280px) {
+ 
+  html{
+    font-size: 27%;
+  }
+  
+  .home-container{
+    height: 40rem;
+  }
+}
+@media (max-width :260px) {
+ 
+  html{
+    font-size: 20%;
+  }
+  
+  .home-container{
+    height: 40rem;
+  }
+}
