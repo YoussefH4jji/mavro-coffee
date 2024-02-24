@@ -16,7 +16,7 @@ export default function Reserve(){
                         <input type="date" name="reservation date" id="date" />
                             <div className="input-container">
                                 <div className="time">
-                                <CiClock1 className="icon"/>
+                                <CiClock1 className="icon clock-icon"/>
                                 <input type="time" placeholder="Time"/>
                                 </div>
                                

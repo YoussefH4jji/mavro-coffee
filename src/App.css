@@ -444,7 +444,7 @@ input{
   align-items: center;
   background-color: var(--footer-bg-color);
   color: var(--txtColor);
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .footer-img{
   width: 25rem;
@@ -486,6 +486,12 @@ footer{
   html{
     font-size: 80%;
   }
+  .footer-section{
+    font-size: 60%;
+  }
+  .footer-img{
+    width: 15rem;
+  }
 }
 @media (max-width :850px){
   .hero-img{
@@ -496,6 +502,9 @@ footer{
 
   html{
     font-size: 55%;
+  }
+  .guest-icon{
+    left: 8rem;
   }
 
 }
@@ -516,6 +525,12 @@ footer{
 }
 
 }
+
+@media (max-width :360px){
+.clock-icon{
+  top: .5rem;
+}
+}
 @media (max-width :343px) {
  
   html{
@@ -527,6 +542,10 @@ footer{
   html{
     font-size: 29%;
   }
+  .clock-icon{
+    top: 1rem;
+  }
+  
 
 }
 @media (max-width :280px) {
